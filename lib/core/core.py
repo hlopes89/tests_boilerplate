@@ -9,8 +9,6 @@ from robot.api import logger
 
 
 class Core:
-    CROMEDRIVER_PATH = "lib/chromedriver/chromedriver"
-
     def __init__(self) -> None:
         self.bi = BuiltIn()
 
@@ -20,6 +18,12 @@ class Core:
     def run_kw(self, kw):
         self.bi.run_keyword(kw)
 
-    def open_driver(self, url):
+
+class browser:
+    CROMEDRIVER_PATH = "lib/chromedriver/chromedriver"
+
+    def __init__(self) -> None:
         self.driver = Chrome(executable_path=self.CROMEDRIVER_PATH)
+
+    def open_driver(self, url):
         self.driver.get(url)
