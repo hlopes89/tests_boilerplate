@@ -7,17 +7,13 @@ class TestLib:
     # TEST SUITE | GLOBAL
 
     def __init__(self) -> None:
-        pass
-
-    @keyword("hello")
-    def hello(self):
-        print("hello")
-
-    @keyword("bye")
-    def bye(self):
-        print("bye")
+        self.core = Core()
 
     @keyword("call core")
     def call_core(self):
-        Core().run_kw("hello")
-        Core().run_kw("bye")
+        pass
+
+    @keyword('open google "${url}"')
+    def open_google(self, url):
+        self.core.log(url)
+        self.core.open_driver(url)
