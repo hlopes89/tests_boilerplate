@@ -1,6 +1,6 @@
 ***Settings***
 #Library   customLib.mypackage.TestLib
-Library   lib.customLib.mypackage.TestLib
+Library   project.api.customLib.mykwfile.TestLib
 
 
 ***Test Cases***

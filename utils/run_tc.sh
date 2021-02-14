@@ -1,1 +1,1 @@
-python3 -m robot --outputdir reports  project/
+python3 -m robot --outputdir reports  project/api/

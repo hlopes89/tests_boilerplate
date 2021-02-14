@@ -19,11 +19,12 @@ class Core:
         self.bi.run_keyword(kw)
 
 
-class browser:
+class Browser:
     CROMEDRIVER_PATH = "lib/chromedriver/chromedriver"
 
-    def __init__(self) -> None:
-        self.driver = Chrome(executable_path=self.CROMEDRIVER_PATH)
-
     def open_driver(self, url):
+        self.driver = Chrome(executable_path=self.CROMEDRIVER_PATH)
+        self.driver.get(url)
+
+    def go_to(self, url):
         self.driver.get(url)

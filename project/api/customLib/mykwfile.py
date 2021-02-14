@@ -1,5 +1,5 @@
 from robot.api.deco import keyword
-from lib.core.core import Core
+from lib.core import Core, Browser
 
 
 class TestLib:
@@ -8,6 +8,7 @@ class TestLib:
 
     def __init__(self) -> None:
         self.core = Core()
+        self.browser = Browser()
 
     @keyword("call core")
     def call_core(self):
@@ -16,4 +17,5 @@ class TestLib:
     @keyword('open google "${url}"')
     def open_google(self, url):
         self.core.log(url)
-        self.core.open_driver(url)
+        self.browser.open_driver(url)
+        self.browser.go_to("https://www.google.com")
