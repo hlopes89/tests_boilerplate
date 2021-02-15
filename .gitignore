@@ -2,3 +2,6 @@ venv/
 .vscode/
 reports
 __pycache__
+chromedriver
+Pipfile.lock
+Pipfile
